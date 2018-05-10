@@ -1,0 +1,39 @@
+__default__:
+    args: "--parsable "
+    N: 1
+    p: "short"
+    t: 360
+    out: "snakelogs/slurm-%j.out"
+    name: "sm.{rule}"
+sradata:
+    t: 120
+    out: "snakelogs/slurm-%j.{rule}.{wildcards.sampid}.out"
+    name: "sm.{rule}.{wildcards.sampid}"
+flexbar:
+    t: 320
+    out: "snakelogs/slurm-%j.{rule}.{wildcards.sampid}.out"
+    name: "sm.{rule}.{wildcards.sampid}"
+sortbam:
+    t: 120
+    out: "snakelogs/slurm-%j.{rule}.out"
+    name: "sm.{rule}"
+bowtie2:
+    t: 1440
+    out: "snakelogs/slurm-%j.{rule}_{wildcards.preset}.{wildcards.sampid}.out"
+    name: "sm.{rule}_{wildcards.preset}.{wildcards.sampid}"
+hisat2:
+    t: 360
+    out: "snakelogs/slurm-%j.{rule}_{wildcards.preset}.{wildcards.sampid}.out"
+    name: "sm.{rule}_{wildcards.preset}.{wildcards.sampid}"
+telescope:
+    t: 1440
+    out: "snakelogs/slurm-%j.{rule}_{wildcards.preset}.{wildcards.sampid}.out"
+    name: "sm.{rule}_{wildcards.preset}.{wildcards.sampid}"
+stringtie:
+    t: 120
+    out: "snakelogs/slurm-%j.{rule}_{wildcards.preset}.{wildcards.sampid}.out"
+    name: "sm.{rule}_{wildcards.preset}.{wildcards.sampid}"
+kallisto:
+    t: 120
+    out: "snakelogs/slurm-%j.{rule}.{wildcards.sampid}.out"
+    name: "sm.{rule}.{wildcards.sampid}"    

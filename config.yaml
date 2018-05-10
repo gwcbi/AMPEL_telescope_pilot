@@ -1,0 +1,50 @@
+adapters:
+    PE: "refs/adapters_PE.fa"
+    SE: "refs/adapters_SE.fa"    
+flexbar:
+    adapter-trim-end: "RIGHT"
+    adapter-min-overlap: 7
+    pre-trim-left: 5
+    max-uncalled: 300
+    min-read-length: 25
+    qtrim: "TAIL"
+    qtrim-format: "sanger"
+    qtrim-threshold: 20
+    zip-output: "GZ"
+bt2idx: "refs/hg38/Sequence/Bowtie2Index/genome"
+bowtie2:
+    multi:
+        k: 100
+        very-sensitive-local: ""
+        score-min: "L,0,1.6"
+        X: 1200
+herv_annotation: "refs/HERV_rmsk.hg38.gtf"
+telescope:
+    inform:
+        exp_tag: "inform"
+        theta_prior: 200000
+        max_iter: 200
+        updated_sam: ""
+ht2idx: "refs/hg38/Hisat2Index/genome"
+hisat2:
+    default:
+        dta: ""
+kallistoidx: "refs/hg38/KallistoIndex/transcripts"
+refgtf: "refs/hg38/Hisat2Index/hg38_ucsc.annotated.gtf"
+stringtie:
+    denovo:
+        l: "DENOVO"
+    multi:
+        l: "MULT"
+        M: 0.05
+        f: 0.01
+        c: 1    
+    guided:
+        l: "REFG"    
+        G: "refs/hg38/Hisat2Index/hg38_ucsc.annotated.gtf"
+        B: ""
+    quant:
+        l: "REFQ"    
+        G: "refs/hg38/Hisat2Index/hg38_ucsc.annotated.gtf"
+        B: ""
+        e: ""
